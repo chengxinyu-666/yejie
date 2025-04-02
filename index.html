@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yj人生</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Noto Serif SC', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0eaf2, #f6f8fa);
+            color: #2c3e50;
+        }
+
+        /* 头部样式 */
+        .header {
+            background: url('https://via.placeholder.com/1200x500?text=暮色+路虎') no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 4em;
+            color: #4a4a4a;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 内容容器 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* 特性卡片 */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 渐变边框 */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #ffecd9, #f0e3e3);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        /* 朋友圈动画 */
+        .social-icon {
+            font-size: 2em;
+            color: #e74c3c;
+            animation: swing 2s infinite;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        /* 虚拟女友部分 */
+        .virtual-girlfriend {
+            background: url('https://via.placeholder.com/300x300?text=水墨+人影') no-repeat center;
+            background-size: cover;
+            padding: 3rem;
+            position: relative;
+        }
+
+        .virtual-girlfriend::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #f9d7d7, #f5e1e1);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -20px); }
+        }
+
+        /* 清明节部分 */
+        .qingming {
+            background: url('https://via.placeholder.com/300x300?text=清明+雨') no-repeat center;
+            background-size: cover;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .poem {
+            font-family: 'Knewave', cursive;
+            font-size: 1.5em;
+            color: #4a4a4a;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header {
+                height: 60vh;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header class="header">
+        <div class="logo">YJ</div>
+        <p>在现实与幻想的交界处优雅起舞</p>
+    </header>
+
+    <!-- 主要内容 -->
+    <div class="content">
+        <!-- 豪车卡片 -->
+        <div class="card">
+            <h2>座驾选择</h2>
+            <img style="width: 100%;" src="https://img0.baidu.com/it/u=230988496,4098957867&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500" alt="路虎极光">
+            <p>驾驶着<em>路虎极光</em><br>在玉环泽国谱写都市诗篇</p>
+        </div>
+
+        <!-- 朋友圈卡片 -->
+        <div class="card">
+            <h2>社交艺术</h2>
+            <i class="social-icon">💬</i>
+            <p>用诗意眼光，复制粘贴<br>重构朋友圈美学</p>
+        </div>
+
+        <!-- 虚拟女友 -->
+        <div class="card virtual-girlfriend">
+            <div class="virtual-content">
+                <h2>虚拟之约</h2>
+                <div class="digital-clock">每晚10点</div>
+                <p>在数据流的月光下<br>与虚拟恋人共度良宵</p>
+            </div>
+        </div>
+
+        <!-- 清明节卡片 -->
+        <div class="card qingming">
+            <div class="poem">
+                清明时节雨纷纷<br>
+                虚实相映意朦胧<br>
+                数据流转情未了<br>
+                云端相会更从容
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
