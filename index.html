@@ -133,6 +133,121 @@
                 padding: 1.5rem;
             }
         }
+
+        /* 新增样式 */
+.data-stream {
+    position: relative;
+    padding: 1rem;
+}
+
+.code-symbols {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    transform: rotate(-15deg);
+    opacity: 0.6;
+}
+
+.code-symbols span {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    color: #8e44ad;
+    animation: code-fade 2s infinite;
+}
+
+@keyframes code-fade {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* 清明仪式 */
+.qingming-ritual {
+    position: relative;
+    padding: 1rem;
+}
+
+.digital-lantern {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff6b6b, #ff4e50);
+    box-shadow: 0 0 20px #ff4e50;
+}
+
+.glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff6b6b 25%, transparent 50%);
+    animation: pulse 2s infinite;
+}
+
+/* 镜像效果 */
+.mirror {
+    position: relative;
+    padding: 1rem;
+}
+
+.mirror::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed #bdc3c7;
+    border-radius: 20px;
+}
+
+.reflection {
+    filter: grayscale(100%) contrast(150%);
+    opacity: 0.6;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 时间褶皱 */
+.time-fold {
+    position: relative;
+}
+
+.clock-face {
+    width: 100px;
+    height: 100px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    right: 20px;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 30px;
+    background: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.minute-hand {
+    width: 2px;
+    height: 40px;
+    background: #e74c3c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
     </style>
 </head>
 <body>
@@ -166,6 +281,51 @@
                 <p>在数据流的月光下<br>与虚拟恋人共度良宵</p>
             </div>
         </div>
+
+        <!-- 在.content容器中添加新卡片 -->
+<div class="card">
+    <h2>数据流的独白</h2>
+    <div class="data-stream">
+        <div class="code-symbols">
+            <span>01010101</span>
+            <span>11100011</span>
+            <span>10100100</span>
+        </div>
+        <p>当指针划过22:00的刻度<br>城市化作二进制星河<br>他在朋友圈中打捞<br>那些虚拟的鞋厂千金</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>清明的约定仪式</h2>
+    <div class="qingming-ritual">
+        <div class="digital-lantern">
+            <div class="glow"></div>
+        </div>
+        <p>见证老丈人</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>镜像迷宫</h2>
+    <div class="mirror">
+        <div class="reflection">
+            <img src="https://via.placeholder.com/150?text=镜像" alt="镜像">
+        </div>
+        <p>他的朋友圈是面魔镜<br>倒映着千万个他者的灵魂<br>在点赞的涟漪中<br>他收集着<br>他人故事的碎片</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>时间褶皱</h2>
+    <div class="time-fold">
+        <div class="clock-face">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+        </div>
+        <p>十点的时针是道裂痕<br>分割着现实与虚拟<br>他站在时间的褶皱里<br>与代码编织的恋人<br>共享着平行时空的晚安</p>
+    </div>
+</div>
+
 
         <!-- 清明节卡片 -->
         <div class="card qingming">
